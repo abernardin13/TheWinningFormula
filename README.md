@@ -31,7 +31,9 @@ Histograms of the variables appear to show the data is normally distributed. The
 
 We can use a correlation matrix to determine the correlation between the variables. The variables with the highest correlation with making the playoffs are Wins, RD, OBP, SLG, and BA. OOBP and OSLG both have negative correlations with making the playoffs. This makes sense because high percentages in these areas should mean more runs against, which should mean more losses. However, initially there are NA's within four variables: RankSeason, RankPlayoffs, OOBP, and OSLG. After removing RankSeason and RankPlayoffs as they are not needed, and predicting the NAs for OOBP and OSLG, correlation between Playoffs and OOBP and OSLG increases, though the correlation is still negative.
 
-#Can Machine Learning Predict Important Variables?
+# Can Machine Learning Predict Important Variables?
+
+The following results are found in the Filter-Based ANOVA, Wrapper-Based-Home, and Embedded python and html files.
 
 We can use wrapper-based, filter-based and embedded feature selection technique to determine how well machine learning can predict the important variables. For each we will show the scores for 8 variables
 
@@ -43,4 +45,10 @@ For Embedded Techniques, we can compare Lasso to Random Forest. Lasso doesn't ap
 
 # Determining Whether OBP and SLG Are Playoff Predictors
 
-When plotting Wins versus RS, RA, RD, OBP, SLG, OOBP, and OSLG, we see there is a strong positive correlation between Wins and Run Differential. Wins and Runs Scored, OBP and SLG also have positive correlations, though less so. We also see somewhat strong negative correlations between Wins and Runs Against, OOBP and OSLG. Linear Regression formulas in other projects have shown that Runs Scored and Runs Against can be predicted using OBP aand SLG for Runs Scored, and OOBP and OSLG for Runs Against. Linear Regression on RD (Run Differential = RS - RA) in these projects have also shown that this can be a predictor for the number of games a team wins. Using the same methods, we will see if we can prove that these formulas predict Run Differential, Wins, and Playoff Appearances for three teams. The data for the three teams are already in the Baseball dataset for comparison. 
+The following details can be found in the Baseball python file as well as the Baseball html file.
+
+Showing the variables on a histogram, the dataset appears to be normally distributed. Focusing on the Wins variable and performing a Shapiro-Wilk test confirms that the dataset is normally distributed from a Wins. From there, a Pearson Correlation Matrix shows that Run Differential and Runs Scored have a strong positive correlation with Wins. OBP and SLG also show to have strong positive correlations with Runs Scored. Consequently, Runs Against have a strong negative correlation with wins, which is expected given that the more runs a team give up, the higher probability of losing. OOBP and OSLG also have a positive correlation with Runs Against, which again, makes sense because those variables show how opponents performed against the team. Further to that, when plotting Wins versus RS, RA, RD, OBP, SLG, OOBP, and OSLG, we see the same results.
+
+Linear Regression formulas in other projects have shown that Runs Scored and Runs Against can be predicted using OBP aand SLG for Runs Scored, and OOBP and OSLG for Runs Against. Linear Regression on RD (Run Differential = RS - RA) in these projects have also shown that this can be a predictor for the number of games a team wins. Using the same methods, I've built predidictive models for Runs Scored given OBP and SLG and Runs Against given OOBP and OSLG. From there I've created a Run Differential variable by finding the difference between the Runs Scored and Runs Against models. I then created Wins model given Run Differential.
+
+After the models are created, I plugged in the OBP and SLG for Oakland, Toronto, and Montreal to predict each team's Runs Scored, then did the same for Runs Against using each team's OOBP and OSLG, and finally predicted number of wins for each team using the Run Differential. I did this to show that the models work regardless of the team. The most accurate predictor was predicting for wins. Toronto and Montreal won 78 and 83 games, respectively, in 2002. The models predicted Toronto at 77.63 wins while Montreal was predicted to win 82.99 games. Oakland was off by 3 Wins, predicting 99.91 wins to their actual 103 victories in 2002. 
