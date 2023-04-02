@@ -14441,10 +14441,26 @@ a.anchor-link {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Add Run Differential (RD) variable</span>
+<span class="n">new_col</span> <span class="o">=</span> <span class="n">baseball</span><span class="p">[</span><span class="s1">&#39;RS&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">baseball</span><span class="p">[</span><span class="s1">&#39;RA&#39;</span><span class="p">]</span>
+<span class="n">baseball</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;RD&#39;</span><span class="p">,</span> <span class="n">new_col</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">baseball</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -14469,7 +14485,7 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 1232 entries, 0 to 1231
-Data columns (total 15 columns):
+Data columns (total 16 columns):
  #   Column        Non-Null Count  Dtype  
 ---  ------        --------------  -----  
  0   Team          1232 non-null   object 
@@ -14478,17 +14494,18 @@ Data columns (total 15 columns):
  3   RS            1232 non-null   int64  
  4   RA            1232 non-null   int64  
  5   W             1232 non-null   int64  
- 6   OBP           1232 non-null   float64
- 7   SLG           1232 non-null   float64
- 8   BA            1232 non-null   float64
- 9   Playoffs      1232 non-null   int64  
- 10  RankSeason    244 non-null    float64
- 11  RankPlayoffs  244 non-null    float64
- 12  G             1232 non-null   int64  
- 13  OOBP          420 non-null    float64
- 14  OSLG          420 non-null    float64
-dtypes: float64(7), int64(6), object(2)
-memory usage: 144.5+ KB
+ 6   RD            1232 non-null   int64  
+ 7   OBP           1232 non-null   float64
+ 8   SLG           1232 non-null   float64
+ 9   BA            1232 non-null   float64
+ 10  Playoffs      1232 non-null   int64  
+ 11  RankSeason    244 non-null    float64
+ 12  RankPlayoffs  244 non-null    float64
+ 13  G             1232 non-null   int64  
+ 14  OOBP          420 non-null    float64
+ 15  OSLG          420 non-null    float64
+dtypes: float64(7), int64(7), object(2)
+memory usage: 154.1+ KB
 </pre>
 </div>
 </div>
@@ -14500,7 +14517,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Check for Categorical variables</span>
@@ -14521,7 +14538,7 @@ memory usage: 144.5+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -14561,8 +14578,8 @@ memory usage: 144.5+ KB
     </tr>
     <tr>
       <th>top</th>
-      <td>CIN</td>
-      <td>NL</td>
+      <td>CHC</td>
+      <td>AL</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -14583,7 +14600,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Convert &#39;Team&#39; variable to a numeric variable</span>
@@ -14601,7 +14618,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_en</span> <span class="o">=</span><span class="n">labelencoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_en</span><span class="p">)</span>
@@ -14621,7 +14638,7 @@ memory usage: 144.5+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -14639,7 +14656,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">baseball</span>
@@ -14655,7 +14672,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">baseball_1</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14676,7 +14693,7 @@ memory usage: 144.5+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -14705,6 +14722,7 @@ memory usage: 144.5+ KB
       <th>RS</th>
       <th>RA</th>
       <th>W</th>
+      <th>RD</th>
       <th>OBP</th>
       <th>SLG</th>
       <th>BA</th>
@@ -14725,6 +14743,7 @@ memory usage: 144.5+ KB
       <td>734</td>
       <td>688</td>
       <td>81</td>
+      <td>46</td>
       <td>0.328</td>
       <td>0.418</td>
       <td>0.259</td>
@@ -14743,6 +14762,7 @@ memory usage: 144.5+ KB
       <td>700</td>
       <td>600</td>
       <td>94</td>
+      <td>100</td>
       <td>0.320</td>
       <td>0.389</td>
       <td>0.247</td>
@@ -14761,6 +14781,7 @@ memory usage: 144.5+ KB
       <td>712</td>
       <td>705</td>
       <td>93</td>
+      <td>7</td>
       <td>0.311</td>
       <td>0.417</td>
       <td>0.247</td>
@@ -14779,6 +14800,7 @@ memory usage: 144.5+ KB
       <td>734</td>
       <td>806</td>
       <td>69</td>
+      <td>-72</td>
       <td>0.315</td>
       <td>0.415</td>
       <td>0.260</td>
@@ -14797,6 +14819,7 @@ memory usage: 144.5+ KB
       <td>613</td>
       <td>759</td>
       <td>61</td>
+      <td>-146</td>
       <td>0.302</td>
       <td>0.378</td>
       <td>0.240</td>
@@ -14824,6 +14847,7 @@ memory usage: 144.5+ KB
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>1227</th>
@@ -14833,6 +14857,7 @@ memory usage: 144.5+ KB
       <td>705</td>
       <td>759</td>
       <td>81</td>
+      <td>-54</td>
       <td>0.330</td>
       <td>0.390</td>
       <td>0.260</td>
@@ -14851,6 +14876,7 @@ memory usage: 144.5+ KB
       <td>706</td>
       <td>626</td>
       <td>93</td>
+      <td>80</td>
       <td>0.321</td>
       <td>0.394</td>
       <td>0.268</td>
@@ -14869,6 +14895,7 @@ memory usage: 144.5+ KB
       <td>878</td>
       <td>690</td>
       <td>103</td>
+      <td>188</td>
       <td>0.341</td>
       <td>0.441</td>
       <td>0.278</td>
@@ -14887,6 +14914,7 @@ memory usage: 144.5+ KB
       <td>774</td>
       <td>664</td>
       <td>84</td>
+      <td>110</td>
       <td>0.335</td>
       <td>0.394</td>
       <td>0.271</td>
@@ -14905,6 +14933,7 @@ memory usage: 144.5+ KB
       <td>599</td>
       <td>716</td>
       <td>60</td>
+      <td>-117</td>
       <td>0.308</td>
       <td>0.373</td>
       <td>0.250</td>
@@ -14917,7 +14946,7 @@ memory usage: 144.5+ KB
     </tr>
   </tbody>
 </table>
-<p>1232 rows × 15 columns</p>
+<p>1232 rows × 16 columns</p>
 </div>
 </div>
 
@@ -14930,7 +14959,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Convert &#39;League&#39; variable into a numeric variable</span>
@@ -14946,7 +14975,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_e</span> <span class="o">=</span> <span class="n">labelencoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_e</span><span class="p">)</span>
@@ -14966,7 +14995,7 @@ memory usage: 144.5+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -14984,7 +15013,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">baseball_1</span>
@@ -14999,7 +15028,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">baseball_2</span> <span class="o">=</span> <span class="n">Y</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -15019,7 +15048,7 @@ memory usage: 144.5+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15048,6 +15077,7 @@ memory usage: 144.5+ KB
       <th>RS</th>
       <th>RA</th>
       <th>W</th>
+      <th>RD</th>
       <th>OBP</th>
       <th>SLG</th>
       <th>BA</th>
@@ -15068,6 +15098,7 @@ memory usage: 144.5+ KB
       <td>734</td>
       <td>688</td>
       <td>81</td>
+      <td>46</td>
       <td>0.328</td>
       <td>0.418</td>
       <td>0.259</td>
@@ -15086,6 +15117,7 @@ memory usage: 144.5+ KB
       <td>700</td>
       <td>600</td>
       <td>94</td>
+      <td>100</td>
       <td>0.320</td>
       <td>0.389</td>
       <td>0.247</td>
@@ -15104,6 +15136,7 @@ memory usage: 144.5+ KB
       <td>712</td>
       <td>705</td>
       <td>93</td>
+      <td>7</td>
       <td>0.311</td>
       <td>0.417</td>
       <td>0.247</td>
@@ -15122,6 +15155,7 @@ memory usage: 144.5+ KB
       <td>734</td>
       <td>806</td>
       <td>69</td>
+      <td>-72</td>
       <td>0.315</td>
       <td>0.415</td>
       <td>0.260</td>
@@ -15140,6 +15174,7 @@ memory usage: 144.5+ KB
       <td>613</td>
       <td>759</td>
       <td>61</td>
+      <td>-146</td>
       <td>0.302</td>
       <td>0.378</td>
       <td>0.240</td>
@@ -15167,6 +15202,7 @@ memory usage: 144.5+ KB
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>1227</th>
@@ -15176,6 +15212,7 @@ memory usage: 144.5+ KB
       <td>705</td>
       <td>759</td>
       <td>81</td>
+      <td>-54</td>
       <td>0.330</td>
       <td>0.390</td>
       <td>0.260</td>
@@ -15194,6 +15231,7 @@ memory usage: 144.5+ KB
       <td>706</td>
       <td>626</td>
       <td>93</td>
+      <td>80</td>
       <td>0.321</td>
       <td>0.394</td>
       <td>0.268</td>
@@ -15212,6 +15250,7 @@ memory usage: 144.5+ KB
       <td>878</td>
       <td>690</td>
       <td>103</td>
+      <td>188</td>
       <td>0.341</td>
       <td>0.441</td>
       <td>0.278</td>
@@ -15230,6 +15269,7 @@ memory usage: 144.5+ KB
       <td>774</td>
       <td>664</td>
       <td>84</td>
+      <td>110</td>
       <td>0.335</td>
       <td>0.394</td>
       <td>0.271</td>
@@ -15248,6 +15288,7 @@ memory usage: 144.5+ KB
       <td>599</td>
       <td>716</td>
       <td>60</td>
+      <td>-117</td>
       <td>0.308</td>
       <td>0.373</td>
       <td>0.250</td>
@@ -15260,7 +15301,7 @@ memory usage: 144.5+ KB
     </tr>
   </tbody>
 </table>
-<p>1232 rows × 15 columns</p>
+<p>1232 rows × 16 columns</p>
 </div>
 </div>
 
@@ -15273,7 +15314,7 @@ memory usage: 144.5+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">baseball_2</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15298,7 +15339,7 @@ memory usage: 144.5+ KB
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 1232 entries, 0 to 1231
-Data columns (total 15 columns):
+Data columns (total 16 columns):
  #   Column        Non-Null Count  Dtype  
 ---  ------        --------------  -----  
  0   Team          1232 non-null   int32  
@@ -15307,295 +15348,20 @@ Data columns (total 15 columns):
  3   RS            1232 non-null   int64  
  4   RA            1232 non-null   int64  
  5   W             1232 non-null   int64  
- 6   OBP           1232 non-null   float64
- 7   SLG           1232 non-null   float64
- 8   BA            1232 non-null   float64
- 9   Playoffs      1232 non-null   int64  
- 10  RankSeason    244 non-null    float64
- 11  RankPlayoffs  244 non-null    float64
- 12  G             1232 non-null   int64  
- 13  OOBP          420 non-null    float64
- 14  OSLG          420 non-null    float64
-dtypes: float64(7), int32(2), int64(6)
-memory usage: 134.9 KB
+ 6   RD            1232 non-null   int64  
+ 7   OBP           1232 non-null   float64
+ 8   SLG           1232 non-null   float64
+ 9   BA            1232 non-null   float64
+ 10  Playoffs      1232 non-null   int64  
+ 11  RankSeason    244 non-null    float64
+ 12  RankPlayoffs  244 non-null    float64
+ 13  G             1232 non-null   int64  
+ 14  OOBP          420 non-null    float64
+ 15  OSLG          420 non-null    float64
+dtypes: float64(7), int32(2), int64(7)
+memory usage: 144.5 KB
 </pre>
 </div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Replace NA&#39;s in &#39;RankSeason&#39; and &#39;RankPlayoffs&#39; with 0.</span>
-
-<span class="n">baseball_2</span><span class="p">[[</span><span class="s1">&#39;RankSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;RankPlayoffs&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="p">[[</span><span class="s1">&#39;RankSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;RankPlayoffs&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">baseball_2</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Team</th>
-      <th>League</th>
-      <th>Year</th>
-      <th>RS</th>
-      <th>RA</th>
-      <th>W</th>
-      <th>OBP</th>
-      <th>SLG</th>
-      <th>BA</th>
-      <th>Playoffs</th>
-      <th>RankSeason</th>
-      <th>RankPlayoffs</th>
-      <th>G</th>
-      <th>OOBP</th>
-      <th>OSLG</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>688</td>
-      <td>81</td>
-      <td>0.328</td>
-      <td>0.418</td>
-      <td>0.259</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.317</td>
-      <td>0.415</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>700</td>
-      <td>600</td>
-      <td>94</td>
-      <td>0.320</td>
-      <td>0.389</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>162</td>
-      <td>0.306</td>
-      <td>0.378</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>712</td>
-      <td>705</td>
-      <td>93</td>
-      <td>0.311</td>
-      <td>0.417</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-      <td>0.315</td>
-      <td>0.403</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>806</td>
-      <td>69</td>
-      <td>0.315</td>
-      <td>0.415</td>
-      <td>0.260</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.331</td>
-      <td>0.428</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>6</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>613</td>
-      <td>759</td>
-      <td>61</td>
-      <td>0.302</td>
-      <td>0.378</td>
-      <td>0.240</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.335</td>
-      <td>0.424</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1227</th>
-      <td>26</td>
-      <td>1</td>
-      <td>1962</td>
-      <td>705</td>
-      <td>759</td>
-      <td>81</td>
-      <td>0.330</td>
-      <td>0.390</td>
-      <td>0.260</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>161</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1228</th>
-      <td>27</td>
-      <td>1</td>
-      <td>1962</td>
-      <td>706</td>
-      <td>626</td>
-      <td>93</td>
-      <td>0.321</td>
-      <td>0.394</td>
-      <td>0.268</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>161</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1229</th>
-      <td>31</td>
-      <td>1</td>
-      <td>1962</td>
-      <td>878</td>
-      <td>690</td>
-      <td>103</td>
-      <td>0.341</td>
-      <td>0.441</td>
-      <td>0.278</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>165</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1230</th>
-      <td>32</td>
-      <td>1</td>
-      <td>1962</td>
-      <td>774</td>
-      <td>664</td>
-      <td>84</td>
-      <td>0.335</td>
-      <td>0.394</td>
-      <td>0.271</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>163</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1231</th>
-      <td>37</td>
-      <td>0</td>
-      <td>1962</td>
-      <td>599</td>
-      <td>716</td>
-      <td>60</td>
-      <td>0.308</td>
-      <td>0.373</td>
-      <td>0.250</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>1232 rows × 15 columns</p>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -15608,10 +15374,10 @@ memory usage: 134.9 KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Predict for NAs in &#39;OOBP&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Replace NA&#39;s in &#39;RankSeason&#39; and &#39;RankPlayoffs&#39; with 0.</span>
 
-<span class="n">data_without_null</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="n">data_without_null</span>
+<span class="n">baseball_2</span><span class="p">[[</span><span class="s1">&#39;RankSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;RankPlayoffs&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="p">[[</span><span class="s1">&#39;RankSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;RankPlayoffs&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">baseball_2</span>
 </pre></div>
 
      </div>
@@ -15656,6 +15422,7 @@ memory usage: 134.9 KB
       <th>RS</th>
       <th>RA</th>
       <th>W</th>
+      <th>RD</th>
       <th>OBP</th>
       <th>SLG</th>
       <th>BA</th>
@@ -15676,6 +15443,7 @@ memory usage: 134.9 KB
       <td>734</td>
       <td>688</td>
       <td>81</td>
+      <td>46</td>
       <td>0.328</td>
       <td>0.418</td>
       <td>0.259</td>
@@ -15694,6 +15462,7 @@ memory usage: 134.9 KB
       <td>700</td>
       <td>600</td>
       <td>94</td>
+      <td>100</td>
       <td>0.320</td>
       <td>0.389</td>
       <td>0.247</td>
@@ -15712,6 +15481,7 @@ memory usage: 134.9 KB
       <td>712</td>
       <td>705</td>
       <td>93</td>
+      <td>7</td>
       <td>0.311</td>
       <td>0.417</td>
       <td>0.247</td>
@@ -15730,6 +15500,7 @@ memory usage: 134.9 KB
       <td>734</td>
       <td>806</td>
       <td>69</td>
+      <td>-72</td>
       <td>0.315</td>
       <td>0.415</td>
       <td>0.260</td>
@@ -15748,6 +15519,7 @@ memory usage: 134.9 KB
       <td>613</td>
       <td>759</td>
       <td>61</td>
+      <td>-146</td>
       <td>0.302</td>
       <td>0.378</td>
       <td>0.240</td>
@@ -15761,631 +15533,6 @@ memory usage: 134.9 KB
     <tr>
       <th>...</th>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>415</th>
-      <td>31</td>
-      <td>1</td>
-      <td>1999</td>
-      <td>872</td>
-      <td>831</td>
-      <td>86</td>
-      <td>0.356</td>
-      <td>0.434</td>
-      <td>0.271</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.345</td>
-      <td>0.423</td>
-    </tr>
-    <tr>
-      <th>416</th>
-      <td>32</td>
-      <td>1</td>
-      <td>1999</td>
-      <td>809</td>
-      <td>838</td>
-      <td>75</td>
-      <td>0.338</td>
-      <td>0.426</td>
-      <td>0.262</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>161</td>
-      <td>0.355</td>
-      <td>0.427</td>
-    </tr>
-    <tr>
-      <th>417</th>
-      <td>33</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>772</td>
-      <td>913</td>
-      <td>69</td>
-      <td>0.343</td>
-      <td>0.411</td>
-      <td>0.274</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.371</td>
-      <td>0.448</td>
-    </tr>
-    <tr>
-      <th>418</th>
-      <td>35</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>945</td>
-      <td>859</td>
-      <td>95</td>
-      <td>0.361</td>
-      <td>0.479</td>
-      <td>0.293</td>
-      <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-      <td>0.346</td>
-      <td>0.459</td>
-    </tr>
-    <tr>
-      <th>419</th>
-      <td>36</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>883</td>
-      <td>862</td>
-      <td>84</td>
-      <td>0.352</td>
-      <td>0.457</td>
-      <td>0.280</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.353</td>
-      <td>0.456</td>
-    </tr>
-  </tbody>
-</table>
-<p>420 rows × 15 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_data_x</span> <span class="o">=</span> <span class="n">data_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">13</span><span class="p">]</span>
-<span class="n">train_data_y</span> <span class="o">=</span> <span class="n">data_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">13</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_data_x</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Team</th>
-      <th>League</th>
-      <th>Year</th>
-      <th>RS</th>
-      <th>RA</th>
-      <th>W</th>
-      <th>OBP</th>
-      <th>SLG</th>
-      <th>BA</th>
-      <th>Playoffs</th>
-      <th>RankSeason</th>
-      <th>RankPlayoffs</th>
-      <th>G</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>688</td>
-      <td>81</td>
-      <td>0.328</td>
-      <td>0.418</td>
-      <td>0.259</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>700</td>
-      <td>600</td>
-      <td>94</td>
-      <td>0.320</td>
-      <td>0.389</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>712</td>
-      <td>705</td>
-      <td>93</td>
-      <td>0.311</td>
-      <td>0.417</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>806</td>
-      <td>69</td>
-      <td>0.315</td>
-      <td>0.415</td>
-      <td>0.260</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>6</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>613</td>
-      <td>759</td>
-      <td>61</td>
-      <td>0.302</td>
-      <td>0.378</td>
-      <td>0.240</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>415</th>
-      <td>31</td>
-      <td>1</td>
-      <td>1999</td>
-      <td>872</td>
-      <td>831</td>
-      <td>86</td>
-      <td>0.356</td>
-      <td>0.434</td>
-      <td>0.271</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>416</th>
-      <td>32</td>
-      <td>1</td>
-      <td>1999</td>
-      <td>809</td>
-      <td>838</td>
-      <td>75</td>
-      <td>0.338</td>
-      <td>0.426</td>
-      <td>0.262</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>161</td>
-    </tr>
-    <tr>
-      <th>417</th>
-      <td>33</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>772</td>
-      <td>913</td>
-      <td>69</td>
-      <td>0.343</td>
-      <td>0.411</td>
-      <td>0.274</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>418</th>
-      <td>35</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>945</td>
-      <td>859</td>
-      <td>95</td>
-      <td>0.361</td>
-      <td>0.479</td>
-      <td>0.293</td>
-      <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <th>419</th>
-      <td>36</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>883</td>
-      <td>862</td>
-      <td>84</td>
-      <td>0.352</td>
-      <td>0.457</td>
-      <td>0.280</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-    </tr>
-  </tbody>
-</table>
-<p>420 rows × 13 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_data_y</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0      0.317
-1      0.306
-2      0.315
-3      0.331
-4      0.335
-       ...  
-415    0.345
-416    0.355
-417    0.371
-418    0.346
-419    0.353
-Name: OOBP, Length: 420, dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
-<span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data_x</span><span class="p">,</span> <span class="n">train_data_y</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_data</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">13</span><span class="p">]</span>
-<span class="n">test_data</span><span class="p">[</span><span class="s1">&#39;OOBP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_data</span><span class="p">))</span>
-<span class="n">baseball_2</span><span class="o">.</span><span class="n">OOBP</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">test_data</span><span class="o">.</span><span class="n">OOBP</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">baseball_2</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Team</th>
-      <th>League</th>
-      <th>Year</th>
-      <th>RS</th>
-      <th>RA</th>
-      <th>W</th>
-      <th>OBP</th>
-      <th>SLG</th>
-      <th>BA</th>
-      <th>Playoffs</th>
-      <th>RankSeason</th>
-      <th>RankPlayoffs</th>
-      <th>G</th>
-      <th>OOBP</th>
-      <th>OSLG</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>688</td>
-      <td>81</td>
-      <td>0.328</td>
-      <td>0.418</td>
-      <td>0.259</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.317000</td>
-      <td>0.415</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>700</td>
-      <td>600</td>
-      <td>94</td>
-      <td>0.320</td>
-      <td>0.389</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>162</td>
-      <td>0.306000</td>
-      <td>0.378</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>712</td>
-      <td>705</td>
-      <td>93</td>
-      <td>0.311</td>
-      <td>0.417</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-      <td>0.315000</td>
-      <td>0.403</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>806</td>
-      <td>69</td>
-      <td>0.315</td>
-      <td>0.415</td>
-      <td>0.260</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.331000</td>
-      <td>0.428</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>6</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>613</td>
-      <td>759</td>
-      <td>61</td>
-      <td>0.302</td>
-      <td>0.378</td>
-      <td>0.240</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.335000</td>
-      <td>0.424</td>
-    </tr>
-    <tr>
-      <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -16410,6 +15557,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>705</td>
       <td>759</td>
       <td>81</td>
+      <td>-54</td>
       <td>0.330</td>
       <td>0.390</td>
       <td>0.260</td>
@@ -16417,7 +15565,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>161</td>
-      <td>0.340993</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16428,6 +15576,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>706</td>
       <td>626</td>
       <td>93</td>
+      <td>80</td>
       <td>0.321</td>
       <td>0.394</td>
       <td>0.268</td>
@@ -16435,7 +15584,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>161</td>
-      <td>0.320679</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16446,6 +15595,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>878</td>
       <td>690</td>
       <td>103</td>
+      <td>188</td>
       <td>0.341</td>
       <td>0.441</td>
       <td>0.278</td>
@@ -16453,7 +15603,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>1.0</td>
       <td>2.0</td>
       <td>165</td>
-      <td>0.324978</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16464,6 +15614,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>774</td>
       <td>664</td>
       <td>84</td>
+      <td>110</td>
       <td>0.335</td>
       <td>0.394</td>
       <td>0.271</td>
@@ -16471,7 +15622,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>163</td>
-      <td>0.327632</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16482,6 +15633,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>599</td>
       <td>716</td>
       <td>60</td>
+      <td>-117</td>
       <td>0.308</td>
       <td>0.373</td>
       <td>0.250</td>
@@ -16489,13 +15641,651 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
-      <td>0.334689</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>1232 rows × 15 columns</p>
+<p>1232 rows × 16 columns</p>
 </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Predict for NAs in &#39;OOBP&#39;</span>
+
+<span class="n">data_without_null</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">data_without_null</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Team</th>
+      <th>League</th>
+      <th>Year</th>
+      <th>RS</th>
+      <th>RA</th>
+      <th>W</th>
+      <th>RD</th>
+      <th>OBP</th>
+      <th>SLG</th>
+      <th>BA</th>
+      <th>Playoffs</th>
+      <th>RankSeason</th>
+      <th>RankPlayoffs</th>
+      <th>G</th>
+      <th>OOBP</th>
+      <th>OSLG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>688</td>
+      <td>81</td>
+      <td>46</td>
+      <td>0.328</td>
+      <td>0.418</td>
+      <td>0.259</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.317</td>
+      <td>0.415</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>700</td>
+      <td>600</td>
+      <td>94</td>
+      <td>100</td>
+      <td>0.320</td>
+      <td>0.389</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>162</td>
+      <td>0.306</td>
+      <td>0.378</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>712</td>
+      <td>705</td>
+      <td>93</td>
+      <td>7</td>
+      <td>0.311</td>
+      <td>0.417</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>162</td>
+      <td>0.315</td>
+      <td>0.403</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>806</td>
+      <td>69</td>
+      <td>-72</td>
+      <td>0.315</td>
+      <td>0.415</td>
+      <td>0.260</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.331</td>
+      <td>0.428</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>613</td>
+      <td>759</td>
+      <td>61</td>
+      <td>-146</td>
+      <td>0.302</td>
+      <td>0.378</td>
+      <td>0.240</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.335</td>
+      <td>0.424</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>415</th>
+      <td>31</td>
+      <td>1</td>
+      <td>1999</td>
+      <td>872</td>
+      <td>831</td>
+      <td>86</td>
+      <td>41</td>
+      <td>0.356</td>
+      <td>0.434</td>
+      <td>0.271</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.345</td>
+      <td>0.423</td>
+    </tr>
+    <tr>
+      <th>416</th>
+      <td>32</td>
+      <td>1</td>
+      <td>1999</td>
+      <td>809</td>
+      <td>838</td>
+      <td>75</td>
+      <td>-29</td>
+      <td>0.338</td>
+      <td>0.426</td>
+      <td>0.262</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>161</td>
+      <td>0.355</td>
+      <td>0.427</td>
+    </tr>
+    <tr>
+      <th>417</th>
+      <td>33</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>772</td>
+      <td>913</td>
+      <td>69</td>
+      <td>-141</td>
+      <td>0.343</td>
+      <td>0.411</td>
+      <td>0.274</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.371</td>
+      <td>0.448</td>
+    </tr>
+    <tr>
+      <th>418</th>
+      <td>35</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>945</td>
+      <td>859</td>
+      <td>95</td>
+      <td>86</td>
+      <td>0.361</td>
+      <td>0.479</td>
+      <td>0.293</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>162</td>
+      <td>0.346</td>
+      <td>0.459</td>
+    </tr>
+    <tr>
+      <th>419</th>
+      <td>36</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>883</td>
+      <td>862</td>
+      <td>84</td>
+      <td>21</td>
+      <td>0.352</td>
+      <td>0.457</td>
+      <td>0.280</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.353</td>
+      <td>0.456</td>
+    </tr>
+  </tbody>
+</table>
+<p>420 rows × 16 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_data_x</span> <span class="o">=</span> <span class="n">data_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">13</span><span class="p">]</span>
+<span class="n">train_data_y</span> <span class="o">=</span> <span class="n">data_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">13</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_data_x</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Team</th>
+      <th>League</th>
+      <th>Year</th>
+      <th>RS</th>
+      <th>RA</th>
+      <th>W</th>
+      <th>RD</th>
+      <th>OBP</th>
+      <th>SLG</th>
+      <th>BA</th>
+      <th>Playoffs</th>
+      <th>RankSeason</th>
+      <th>RankPlayoffs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>688</td>
+      <td>81</td>
+      <td>46</td>
+      <td>0.328</td>
+      <td>0.418</td>
+      <td>0.259</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>700</td>
+      <td>600</td>
+      <td>94</td>
+      <td>100</td>
+      <td>0.320</td>
+      <td>0.389</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>4.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>712</td>
+      <td>705</td>
+      <td>93</td>
+      <td>7</td>
+      <td>0.311</td>
+      <td>0.417</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>806</td>
+      <td>69</td>
+      <td>-72</td>
+      <td>0.315</td>
+      <td>0.415</td>
+      <td>0.260</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>613</td>
+      <td>759</td>
+      <td>61</td>
+      <td>-146</td>
+      <td>0.302</td>
+      <td>0.378</td>
+      <td>0.240</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>415</th>
+      <td>31</td>
+      <td>1</td>
+      <td>1999</td>
+      <td>872</td>
+      <td>831</td>
+      <td>86</td>
+      <td>41</td>
+      <td>0.356</td>
+      <td>0.434</td>
+      <td>0.271</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>416</th>
+      <td>32</td>
+      <td>1</td>
+      <td>1999</td>
+      <td>809</td>
+      <td>838</td>
+      <td>75</td>
+      <td>-29</td>
+      <td>0.338</td>
+      <td>0.426</td>
+      <td>0.262</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>417</th>
+      <td>33</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>772</td>
+      <td>913</td>
+      <td>69</td>
+      <td>-141</td>
+      <td>0.343</td>
+      <td>0.411</td>
+      <td>0.274</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>418</th>
+      <td>35</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>945</td>
+      <td>859</td>
+      <td>95</td>
+      <td>86</td>
+      <td>0.361</td>
+      <td>0.479</td>
+      <td>0.293</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>419</th>
+      <td>36</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>883</td>
+      <td>862</td>
+      <td>84</td>
+      <td>21</td>
+      <td>0.352</td>
+      <td>0.457</td>
+      <td>0.280</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>420 rows × 13 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_data_y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0      162
+1      162
+2      162
+3      162
+4      162
+      ... 
+415    162
+416    161
+417    162
+418    162
+419    162
+Name: G, Length: 420, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data_x</span><span class="p">,</span> <span class="n">train_data_y</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div>
 </div>
 
 </div>
@@ -16510,9 +16300,9 @@ Name: OOBP, Length: 420, dtype: float64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Round &#39;OOBP&#39; to 3 decimal places</span>
-
-<span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OOBP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OOBP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">decimals</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_data</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">13</span><span class="p">]</span>
+<span class="n">test_data</span><span class="p">[</span><span class="s1">&#39;OOBP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_data</span><span class="p">))</span>
+<span class="n">baseball_2</span><span class="o">.</span><span class="n">OOBP</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">test_data</span><span class="o">.</span><span class="n">OOBP</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">baseball_2</span>
 </pre></div>
 
@@ -16558,6 +16348,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <th>RS</th>
       <th>RA</th>
       <th>W</th>
+      <th>RD</th>
       <th>OBP</th>
       <th>SLG</th>
       <th>BA</th>
@@ -16578,6 +16369,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>688</td>
       <td>81</td>
+      <td>46</td>
       <td>0.328</td>
       <td>0.418</td>
       <td>0.259</td>
@@ -16585,7 +16377,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
-      <td>0.317</td>
+      <td>0.317000</td>
       <td>0.415</td>
     </tr>
     <tr>
@@ -16596,6 +16388,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>700</td>
       <td>600</td>
       <td>94</td>
+      <td>100</td>
       <td>0.320</td>
       <td>0.389</td>
       <td>0.247</td>
@@ -16603,7 +16396,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>4.0</td>
       <td>5.0</td>
       <td>162</td>
-      <td>0.306</td>
+      <td>0.306000</td>
       <td>0.378</td>
     </tr>
     <tr>
@@ -16614,6 +16407,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>712</td>
       <td>705</td>
       <td>93</td>
+      <td>7</td>
       <td>0.311</td>
       <td>0.417</td>
       <td>0.247</td>
@@ -16621,7 +16415,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>5.0</td>
       <td>4.0</td>
       <td>162</td>
-      <td>0.315</td>
+      <td>0.315000</td>
       <td>0.403</td>
     </tr>
     <tr>
@@ -16632,6 +16426,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>806</td>
       <td>69</td>
+      <td>-72</td>
       <td>0.315</td>
       <td>0.415</td>
       <td>0.260</td>
@@ -16639,7 +16434,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
-      <td>0.331</td>
+      <td>0.331000</td>
       <td>0.428</td>
     </tr>
     <tr>
@@ -16650,6 +16445,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>613</td>
       <td>759</td>
       <td>61</td>
+      <td>-146</td>
       <td>0.302</td>
       <td>0.378</td>
       <td>0.240</td>
@@ -16657,11 +16453,12 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
-      <td>0.335</td>
+      <td>0.335000</td>
       <td>0.424</td>
     </tr>
     <tr>
       <th>...</th>
+      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -16686,6 +16483,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>705</td>
       <td>759</td>
       <td>81</td>
+      <td>-54</td>
       <td>0.330</td>
       <td>0.390</td>
       <td>0.260</td>
@@ -16693,7 +16491,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>161</td>
-      <td>0.341</td>
+      <td>161.257267</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16704,6 +16502,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>706</td>
       <td>626</td>
       <td>93</td>
+      <td>80</td>
       <td>0.321</td>
       <td>0.394</td>
       <td>0.268</td>
@@ -16711,7 +16510,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>161</td>
-      <td>0.321</td>
+      <td>161.332126</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16722,6 +16521,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>878</td>
       <td>690</td>
       <td>103</td>
+      <td>188</td>
       <td>0.341</td>
       <td>0.441</td>
       <td>0.278</td>
@@ -16729,7 +16529,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>1.0</td>
       <td>2.0</td>
       <td>165</td>
-      <td>0.325</td>
+      <td>161.370727</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16740,6 +16540,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>774</td>
       <td>664</td>
       <td>84</td>
+      <td>110</td>
       <td>0.335</td>
       <td>0.394</td>
       <td>0.271</td>
@@ -16747,7 +16548,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>163</td>
-      <td>0.328</td>
+      <td>161.309236</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -16758,6 +16559,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>599</td>
       <td>716</td>
       <td>60</td>
+      <td>-117</td>
       <td>0.308</td>
       <td>0.373</td>
       <td>0.250</td>
@@ -16765,12 +16567,12 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
-      <td>0.335</td>
+      <td>160.936351</td>
       <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>1232 rows × 15 columns</p>
+<p>1232 rows × 16 columns</p>
 </div>
 </div>
 
@@ -16786,10 +16588,10 @@ Name: OOBP, Length: 420, dtype: float64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Predict NA&#39;s for &#39;OSLG&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Round &#39;OOBP&#39; to 3 decimal places</span>
 
-<span class="n">data2_without_null</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="n">data2_without_null</span>
+<span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OOBP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OOBP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">decimals</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">baseball_2</span>
 </pre></div>
 
      </div>
@@ -16834,6 +16636,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <th>RS</th>
       <th>RA</th>
       <th>W</th>
+      <th>RD</th>
       <th>OBP</th>
       <th>SLG</th>
       <th>BA</th>
@@ -16854,6 +16657,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>688</td>
       <td>81</td>
+      <td>46</td>
       <td>0.328</td>
       <td>0.418</td>
       <td>0.259</td>
@@ -16872,6 +16676,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>700</td>
       <td>600</td>
       <td>94</td>
+      <td>100</td>
       <td>0.320</td>
       <td>0.389</td>
       <td>0.247</td>
@@ -16890,6 +16695,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>712</td>
       <td>705</td>
       <td>93</td>
+      <td>7</td>
       <td>0.311</td>
       <td>0.417</td>
       <td>0.247</td>
@@ -16908,6 +16714,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>806</td>
       <td>69</td>
+      <td>-72</td>
       <td>0.315</td>
       <td>0.415</td>
       <td>0.260</td>
@@ -16926,6 +16733,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>613</td>
       <td>759</td>
       <td>61</td>
+      <td>-146</td>
       <td>0.302</td>
       <td>0.378</td>
       <td>0.240</td>
@@ -16953,100 +16761,106 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>415</th>
-      <td>31</td>
+      <th>1227</th>
+      <td>26</td>
       <td>1</td>
-      <td>1999</td>
-      <td>872</td>
-      <td>831</td>
-      <td>86</td>
-      <td>0.356</td>
-      <td>0.434</td>
-      <td>0.271</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.345</td>
-      <td>0.423</td>
-    </tr>
-    <tr>
-      <th>416</th>
-      <td>32</td>
-      <td>1</td>
-      <td>1999</td>
-      <td>809</td>
-      <td>838</td>
-      <td>75</td>
-      <td>0.338</td>
-      <td>0.426</td>
-      <td>0.262</td>
+      <td>1962</td>
+      <td>705</td>
+      <td>759</td>
+      <td>81</td>
+      <td>-54</td>
+      <td>0.330</td>
+      <td>0.390</td>
+      <td>0.260</td>
       <td>0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>161</td>
-      <td>0.355</td>
-      <td>0.427</td>
+      <td>161.257</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>417</th>
-      <td>33</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>772</td>
-      <td>913</td>
-      <td>69</td>
-      <td>0.343</td>
-      <td>0.411</td>
-      <td>0.274</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.371</td>
-      <td>0.448</td>
-    </tr>
-    <tr>
-      <th>418</th>
-      <td>35</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>945</td>
-      <td>859</td>
-      <td>95</td>
-      <td>0.361</td>
-      <td>0.479</td>
-      <td>0.293</td>
+      <th>1228</th>
+      <td>27</td>
       <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-      <td>0.346</td>
-      <td>0.459</td>
+      <td>1962</td>
+      <td>706</td>
+      <td>626</td>
+      <td>93</td>
+      <td>80</td>
+      <td>0.321</td>
+      <td>0.394</td>
+      <td>0.268</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>161</td>
+      <td>161.332</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>419</th>
-      <td>36</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>883</td>
-      <td>862</td>
+      <th>1229</th>
+      <td>31</td>
+      <td>1</td>
+      <td>1962</td>
+      <td>878</td>
+      <td>690</td>
+      <td>103</td>
+      <td>188</td>
+      <td>0.341</td>
+      <td>0.441</td>
+      <td>0.278</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>165</td>
+      <td>161.371</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1230</th>
+      <td>32</td>
+      <td>1</td>
+      <td>1962</td>
+      <td>774</td>
+      <td>664</td>
       <td>84</td>
-      <td>0.352</td>
-      <td>0.457</td>
-      <td>0.280</td>
+      <td>110</td>
+      <td>0.335</td>
+      <td>0.394</td>
+      <td>0.271</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>163</td>
+      <td>161.309</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1231</th>
+      <td>37</td>
+      <td>0</td>
+      <td>1962</td>
+      <td>599</td>
+      <td>716</td>
+      <td>60</td>
+      <td>-117</td>
+      <td>0.308</td>
+      <td>0.373</td>
+      <td>0.250</td>
       <td>0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
-      <td>0.353</td>
-      <td>0.456</td>
+      <td>160.936</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>420 rows × 15 columns</p>
+<p>1232 rows × 16 columns</p>
 </div>
 </div>
 
@@ -17056,28 +16870,16 @@ Name: OOBP, Length: 420, dtype: float64</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train2_data_x</span> <span class="o">=</span> <span class="n">data2_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">14</span><span class="p">]</span>
-<span class="n">train2_data_y</span> <span class="o">=</span> <span class="n">data2_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">14</span><span class="p">]</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Predict NA&#39;s for &#39;OSLG&#39;</span>
 
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train2_data_x</span>
+<span class="n">data2_without_null</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">data2_without_null</span>
 </pre></div>
 
      </div>
@@ -17093,7 +16895,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
@@ -17122,354 +16924,7 @@ Name: OOBP, Length: 420, dtype: float64</pre>
       <th>RS</th>
       <th>RA</th>
       <th>W</th>
-      <th>OBP</th>
-      <th>SLG</th>
-      <th>BA</th>
-      <th>Playoffs</th>
-      <th>RankSeason</th>
-      <th>RankPlayoffs</th>
-      <th>G</th>
-      <th>OOBP</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>688</td>
-      <td>81</td>
-      <td>0.328</td>
-      <td>0.418</td>
-      <td>0.259</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.317</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>700</td>
-      <td>600</td>
-      <td>94</td>
-      <td>0.320</td>
-      <td>0.389</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>162</td>
-      <td>0.306</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>712</td>
-      <td>705</td>
-      <td>93</td>
-      <td>0.311</td>
-      <td>0.417</td>
-      <td>0.247</td>
-      <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-      <td>0.315</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>0</td>
-      <td>2012</td>
-      <td>734</td>
-      <td>806</td>
-      <td>69</td>
-      <td>0.315</td>
-      <td>0.415</td>
-      <td>0.260</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.331</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>6</td>
-      <td>1</td>
-      <td>2012</td>
-      <td>613</td>
-      <td>759</td>
-      <td>61</td>
-      <td>0.302</td>
-      <td>0.378</td>
-      <td>0.240</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.335</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>415</th>
-      <td>31</td>
-      <td>1</td>
-      <td>1999</td>
-      <td>872</td>
-      <td>831</td>
-      <td>86</td>
-      <td>0.356</td>
-      <td>0.434</td>
-      <td>0.271</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.345</td>
-    </tr>
-    <tr>
-      <th>416</th>
-      <td>32</td>
-      <td>1</td>
-      <td>1999</td>
-      <td>809</td>
-      <td>838</td>
-      <td>75</td>
-      <td>0.338</td>
-      <td>0.426</td>
-      <td>0.262</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>161</td>
-      <td>0.355</td>
-    </tr>
-    <tr>
-      <th>417</th>
-      <td>33</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>772</td>
-      <td>913</td>
-      <td>69</td>
-      <td>0.343</td>
-      <td>0.411</td>
-      <td>0.274</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.371</td>
-    </tr>
-    <tr>
-      <th>418</th>
-      <td>35</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>945</td>
-      <td>859</td>
-      <td>95</td>
-      <td>0.361</td>
-      <td>0.479</td>
-      <td>0.293</td>
-      <td>1</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>162</td>
-      <td>0.346</td>
-    </tr>
-    <tr>
-      <th>419</th>
-      <td>36</td>
-      <td>0</td>
-      <td>1999</td>
-      <td>883</td>
-      <td>862</td>
-      <td>84</td>
-      <td>0.352</td>
-      <td>0.457</td>
-      <td>0.280</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>162</td>
-      <td>0.353</td>
-    </tr>
-  </tbody>
-</table>
-<p>420 rows × 14 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train2_data_y</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0      0.415
-1      0.378
-2      0.403
-3      0.428
-4      0.424
-       ...  
-415    0.423
-416    0.427
-417    0.448
-418    0.459
-419    0.456
-Name: OSLG, Length: 420, dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train2_data_x</span><span class="p">,</span> <span class="n">train2_data_y</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test2_data</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">14</span><span class="p">]</span>
-<span class="n">test2_data</span><span class="p">[</span><span class="s1">&#39;OSLG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test2_data</span><span class="p">))</span>
-<span class="n">baseball_2</span><span class="o">.</span><span class="n">OSLG</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">test2_data</span><span class="o">.</span><span class="n">OSLG</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">baseball_2</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Team</th>
-      <th>League</th>
-      <th>Year</th>
-      <th>RS</th>
-      <th>RA</th>
-      <th>W</th>
+      <th>RD</th>
       <th>OBP</th>
       <th>SLG</th>
       <th>BA</th>
@@ -17490,6 +16945,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>688</td>
       <td>81</td>
+      <td>46</td>
       <td>0.328</td>
       <td>0.418</td>
       <td>0.259</td>
@@ -17498,7 +16954,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>162</td>
       <td>0.317</td>
-      <td>0.415000</td>
+      <td>0.415</td>
     </tr>
     <tr>
       <th>1</th>
@@ -17508,6 +16964,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>700</td>
       <td>600</td>
       <td>94</td>
+      <td>100</td>
       <td>0.320</td>
       <td>0.389</td>
       <td>0.247</td>
@@ -17516,7 +16973,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>5.0</td>
       <td>162</td>
       <td>0.306</td>
-      <td>0.378000</td>
+      <td>0.378</td>
     </tr>
     <tr>
       <th>2</th>
@@ -17526,6 +16983,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>712</td>
       <td>705</td>
       <td>93</td>
+      <td>7</td>
       <td>0.311</td>
       <td>0.417</td>
       <td>0.247</td>
@@ -17534,7 +16992,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>4.0</td>
       <td>162</td>
       <td>0.315</td>
-      <td>0.403000</td>
+      <td>0.403</td>
     </tr>
     <tr>
       <th>3</th>
@@ -17544,6 +17002,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>806</td>
       <td>69</td>
+      <td>-72</td>
       <td>0.315</td>
       <td>0.415</td>
       <td>0.260</td>
@@ -17552,7 +17011,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>162</td>
       <td>0.331</td>
-      <td>0.428000</td>
+      <td>0.428</td>
     </tr>
     <tr>
       <th>4</th>
@@ -17562,6 +17021,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>613</td>
       <td>759</td>
       <td>61</td>
+      <td>-146</td>
       <td>0.302</td>
       <td>0.378</td>
       <td>0.240</td>
@@ -17570,7 +17030,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>162</td>
       <td>0.335</td>
-      <td>0.424000</td>
+      <td>0.424</td>
     </tr>
     <tr>
       <th>...</th>
@@ -17589,101 +17049,467 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>1227</th>
-      <td>26</td>
-      <td>1</td>
-      <td>1962</td>
-      <td>705</td>
-      <td>759</td>
-      <td>81</td>
-      <td>0.330</td>
-      <td>0.390</td>
-      <td>0.260</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>161</td>
-      <td>0.341</td>
-      <td>0.417606</td>
-    </tr>
-    <tr>
-      <th>1228</th>
-      <td>27</td>
-      <td>1</td>
-      <td>1962</td>
-      <td>706</td>
-      <td>626</td>
-      <td>93</td>
-      <td>0.321</td>
-      <td>0.394</td>
-      <td>0.268</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>161</td>
-      <td>0.321</td>
-      <td>0.381686</td>
-    </tr>
-    <tr>
-      <th>1229</th>
+      <th>415</th>
       <td>31</td>
       <td>1</td>
-      <td>1962</td>
-      <td>878</td>
-      <td>690</td>
-      <td>103</td>
-      <td>0.341</td>
-      <td>0.441</td>
-      <td>0.278</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>165</td>
-      <td>0.325</td>
-      <td>0.412255</td>
-    </tr>
-    <tr>
-      <th>1230</th>
-      <td>32</td>
-      <td>1</td>
-      <td>1962</td>
-      <td>774</td>
-      <td>664</td>
-      <td>84</td>
-      <td>0.335</td>
-      <td>0.394</td>
+      <td>1999</td>
+      <td>872</td>
+      <td>831</td>
+      <td>86</td>
+      <td>41</td>
+      <td>0.356</td>
+      <td>0.434</td>
       <td>0.271</td>
       <td>0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>163</td>
-      <td>0.328</td>
-      <td>0.397784</td>
+      <td>162</td>
+      <td>0.345</td>
+      <td>0.423</td>
     </tr>
     <tr>
-      <th>1231</th>
-      <td>37</td>
+      <th>416</th>
+      <td>32</td>
+      <td>1</td>
+      <td>1999</td>
+      <td>809</td>
+      <td>838</td>
+      <td>75</td>
+      <td>-29</td>
+      <td>0.338</td>
+      <td>0.426</td>
+      <td>0.262</td>
       <td>0</td>
-      <td>1962</td>
-      <td>599</td>
-      <td>716</td>
-      <td>60</td>
-      <td>0.308</td>
-      <td>0.373</td>
-      <td>0.250</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>161</td>
+      <td>0.355</td>
+      <td>0.427</td>
+    </tr>
+    <tr>
+      <th>417</th>
+      <td>33</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>772</td>
+      <td>913</td>
+      <td>69</td>
+      <td>-141</td>
+      <td>0.343</td>
+      <td>0.411</td>
+      <td>0.274</td>
       <td>0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
-      <td>0.335</td>
-      <td>0.408454</td>
+      <td>0.371</td>
+      <td>0.448</td>
+    </tr>
+    <tr>
+      <th>418</th>
+      <td>35</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>945</td>
+      <td>859</td>
+      <td>95</td>
+      <td>86</td>
+      <td>0.361</td>
+      <td>0.479</td>
+      <td>0.293</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>162</td>
+      <td>0.346</td>
+      <td>0.459</td>
+    </tr>
+    <tr>
+      <th>419</th>
+      <td>36</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>883</td>
+      <td>862</td>
+      <td>84</td>
+      <td>21</td>
+      <td>0.352</td>
+      <td>0.457</td>
+      <td>0.280</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.353</td>
+      <td>0.456</td>
     </tr>
   </tbody>
 </table>
-<p>1232 rows × 15 columns</p>
+<p>420 rows × 16 columns</p>
 </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train2_data_x</span> <span class="o">=</span> <span class="n">data2_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">14</span><span class="p">]</span>
+<span class="n">train2_data_y</span> <span class="o">=</span> <span class="n">data2_without_null</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">14</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train2_data_x</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Team</th>
+      <th>League</th>
+      <th>Year</th>
+      <th>RS</th>
+      <th>RA</th>
+      <th>W</th>
+      <th>RD</th>
+      <th>OBP</th>
+      <th>SLG</th>
+      <th>BA</th>
+      <th>Playoffs</th>
+      <th>RankSeason</th>
+      <th>RankPlayoffs</th>
+      <th>G</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>688</td>
+      <td>81</td>
+      <td>46</td>
+      <td>0.328</td>
+      <td>0.418</td>
+      <td>0.259</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>700</td>
+      <td>600</td>
+      <td>94</td>
+      <td>100</td>
+      <td>0.320</td>
+      <td>0.389</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>712</td>
+      <td>705</td>
+      <td>93</td>
+      <td>7</td>
+      <td>0.311</td>
+      <td>0.417</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>806</td>
+      <td>69</td>
+      <td>-72</td>
+      <td>0.315</td>
+      <td>0.415</td>
+      <td>0.260</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>613</td>
+      <td>759</td>
+      <td>61</td>
+      <td>-146</td>
+      <td>0.302</td>
+      <td>0.378</td>
+      <td>0.240</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>415</th>
+      <td>31</td>
+      <td>1</td>
+      <td>1999</td>
+      <td>872</td>
+      <td>831</td>
+      <td>86</td>
+      <td>41</td>
+      <td>0.356</td>
+      <td>0.434</td>
+      <td>0.271</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>416</th>
+      <td>32</td>
+      <td>1</td>
+      <td>1999</td>
+      <td>809</td>
+      <td>838</td>
+      <td>75</td>
+      <td>-29</td>
+      <td>0.338</td>
+      <td>0.426</td>
+      <td>0.262</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>161</td>
+    </tr>
+    <tr>
+      <th>417</th>
+      <td>33</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>772</td>
+      <td>913</td>
+      <td>69</td>
+      <td>-141</td>
+      <td>0.343</td>
+      <td>0.411</td>
+      <td>0.274</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>418</th>
+      <td>35</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>945</td>
+      <td>859</td>
+      <td>95</td>
+      <td>86</td>
+      <td>0.361</td>
+      <td>0.479</td>
+      <td>0.293</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>419</th>
+      <td>36</td>
+      <td>0</td>
+      <td>1999</td>
+      <td>883</td>
+      <td>862</td>
+      <td>84</td>
+      <td>21</td>
+      <td>0.352</td>
+      <td>0.457</td>
+      <td>0.280</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+    </tr>
+  </tbody>
+</table>
+<p>420 rows × 14 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train2_data_y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0      0.317
+1      0.306
+2      0.315
+3      0.331
+4      0.335
+       ...  
+415    0.345
+416    0.355
+417    0.371
+418    0.346
+419    0.353
+Name: OOBP, Length: 420, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train2_data_x</span><span class="p">,</span> <span class="n">train2_data_y</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div>
 </div>
 
 </div>
@@ -17698,9 +17524,9 @@ Name: OSLG, Length: 420, dtype: float64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Round &#39;OSLG&#39; to 3 decimals</span>
-
-<span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OSLG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OSLG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">decimals</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test2_data</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">14</span><span class="p">]</span>
+<span class="n">test2_data</span><span class="p">[</span><span class="s1">&#39;OSLG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test2_data</span><span class="p">))</span>
+<span class="n">baseball_2</span><span class="o">.</span><span class="n">OSLG</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">test2_data</span><span class="o">.</span><span class="n">OSLG</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">baseball_2</span>
 </pre></div>
 
@@ -17746,6 +17572,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <th>RS</th>
       <th>RA</th>
       <th>W</th>
+      <th>RD</th>
       <th>OBP</th>
       <th>SLG</th>
       <th>BA</th>
@@ -17766,6 +17593,295 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>688</td>
       <td>81</td>
+      <td>46</td>
+      <td>0.328</td>
+      <td>0.418</td>
+      <td>0.259</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.317</td>
+      <td>0.415000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>700</td>
+      <td>600</td>
+      <td>94</td>
+      <td>100</td>
+      <td>0.320</td>
+      <td>0.389</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>162</td>
+      <td>0.306</td>
+      <td>0.378000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>712</td>
+      <td>705</td>
+      <td>93</td>
+      <td>7</td>
+      <td>0.311</td>
+      <td>0.417</td>
+      <td>0.247</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>162</td>
+      <td>0.315</td>
+      <td>0.403000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>806</td>
+      <td>69</td>
+      <td>-72</td>
+      <td>0.315</td>
+      <td>0.415</td>
+      <td>0.260</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.331</td>
+      <td>0.428000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>613</td>
+      <td>759</td>
+      <td>61</td>
+      <td>-146</td>
+      <td>0.302</td>
+      <td>0.378</td>
+      <td>0.240</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>0.335</td>
+      <td>0.424000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1227</th>
+      <td>26</td>
+      <td>1</td>
+      <td>1962</td>
+      <td>705</td>
+      <td>759</td>
+      <td>81</td>
+      <td>-54</td>
+      <td>0.330</td>
+      <td>0.390</td>
+      <td>0.260</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>161</td>
+      <td>161.257</td>
+      <td>0.340993</td>
+    </tr>
+    <tr>
+      <th>1228</th>
+      <td>27</td>
+      <td>1</td>
+      <td>1962</td>
+      <td>706</td>
+      <td>626</td>
+      <td>93</td>
+      <td>80</td>
+      <td>0.321</td>
+      <td>0.394</td>
+      <td>0.268</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>161</td>
+      <td>161.332</td>
+      <td>0.320679</td>
+    </tr>
+    <tr>
+      <th>1229</th>
+      <td>31</td>
+      <td>1</td>
+      <td>1962</td>
+      <td>878</td>
+      <td>690</td>
+      <td>103</td>
+      <td>188</td>
+      <td>0.341</td>
+      <td>0.441</td>
+      <td>0.278</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>165</td>
+      <td>161.371</td>
+      <td>0.324978</td>
+    </tr>
+    <tr>
+      <th>1230</th>
+      <td>32</td>
+      <td>1</td>
+      <td>1962</td>
+      <td>774</td>
+      <td>664</td>
+      <td>84</td>
+      <td>110</td>
+      <td>0.335</td>
+      <td>0.394</td>
+      <td>0.271</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>163</td>
+      <td>161.309</td>
+      <td>0.327632</td>
+    </tr>
+    <tr>
+      <th>1231</th>
+      <td>37</td>
+      <td>0</td>
+      <td>1962</td>
+      <td>599</td>
+      <td>716</td>
+      <td>60</td>
+      <td>-117</td>
+      <td>0.308</td>
+      <td>0.373</td>
+      <td>0.250</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>162</td>
+      <td>160.936</td>
+      <td>0.334689</td>
+    </tr>
+  </tbody>
+</table>
+<p>1232 rows × 16 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Round &#39;OSLG&#39; to 3 decimals</span>
+
+<span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OSLG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="p">[</span><span class="s1">&#39;OSLG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">decimals</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">baseball_2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Team</th>
+      <th>League</th>
+      <th>Year</th>
+      <th>RS</th>
+      <th>RA</th>
+      <th>W</th>
+      <th>RD</th>
+      <th>OBP</th>
+      <th>SLG</th>
+      <th>BA</th>
+      <th>Playoffs</th>
+      <th>RankSeason</th>
+      <th>RankPlayoffs</th>
+      <th>G</th>
+      <th>OOBP</th>
+      <th>OSLG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>2012</td>
+      <td>734</td>
+      <td>688</td>
+      <td>81</td>
+      <td>46</td>
       <td>0.328</td>
       <td>0.418</td>
       <td>0.259</td>
@@ -17784,6 +17900,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>700</td>
       <td>600</td>
       <td>94</td>
+      <td>100</td>
       <td>0.320</td>
       <td>0.389</td>
       <td>0.247</td>
@@ -17802,6 +17919,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>712</td>
       <td>705</td>
       <td>93</td>
+      <td>7</td>
       <td>0.311</td>
       <td>0.417</td>
       <td>0.247</td>
@@ -17820,6 +17938,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>734</td>
       <td>806</td>
       <td>69</td>
+      <td>-72</td>
       <td>0.315</td>
       <td>0.415</td>
       <td>0.260</td>
@@ -17838,6 +17957,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>613</td>
       <td>759</td>
       <td>61</td>
+      <td>-146</td>
       <td>0.302</td>
       <td>0.378</td>
       <td>0.240</td>
@@ -17865,6 +17985,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>1227</th>
@@ -17874,6 +17995,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>705</td>
       <td>759</td>
       <td>81</td>
+      <td>-54</td>
       <td>0.330</td>
       <td>0.390</td>
       <td>0.260</td>
@@ -17881,8 +18003,8 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>161</td>
+      <td>161.257</td>
       <td>0.341</td>
-      <td>0.418</td>
     </tr>
     <tr>
       <th>1228</th>
@@ -17892,6 +18014,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>706</td>
       <td>626</td>
       <td>93</td>
+      <td>80</td>
       <td>0.321</td>
       <td>0.394</td>
       <td>0.268</td>
@@ -17899,8 +18022,8 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>161</td>
+      <td>161.332</td>
       <td>0.321</td>
-      <td>0.382</td>
     </tr>
     <tr>
       <th>1229</th>
@@ -17910,6 +18033,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>878</td>
       <td>690</td>
       <td>103</td>
+      <td>188</td>
       <td>0.341</td>
       <td>0.441</td>
       <td>0.278</td>
@@ -17917,8 +18041,8 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>1.0</td>
       <td>2.0</td>
       <td>165</td>
+      <td>161.371</td>
       <td>0.325</td>
-      <td>0.412</td>
     </tr>
     <tr>
       <th>1230</th>
@@ -17928,6 +18052,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>774</td>
       <td>664</td>
       <td>84</td>
+      <td>110</td>
       <td>0.335</td>
       <td>0.394</td>
       <td>0.271</td>
@@ -17935,8 +18060,8 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>163</td>
+      <td>161.309</td>
       <td>0.328</td>
-      <td>0.398</td>
     </tr>
     <tr>
       <th>1231</th>
@@ -17946,6 +18071,7 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>599</td>
       <td>716</td>
       <td>60</td>
+      <td>-117</td>
       <td>0.308</td>
       <td>0.373</td>
       <td>0.250</td>
@@ -17953,12 +18079,12 @@ Name: OSLG, Length: 420, dtype: float64</pre>
       <td>0.0</td>
       <td>0.0</td>
       <td>162</td>
+      <td>160.936</td>
       <td>0.335</td>
-      <td>0.408</td>
     </tr>
   </tbody>
 </table>
-<p>1232 rows × 15 columns</p>
+<p>1232 rows × 16 columns</p>
 </div>
 </div>
 
@@ -17971,11 +18097,12 @@ Name: OSLG, Length: 420, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Rank the variables by importance with ANOVA</span>
-
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">importances</span> <span class="o">=</span> <span class="n">baseball_2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Playoffs&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">baseball_2</span><span class="o">.</span><span class="n">Playoffs</span><span class="p">))</span>
 <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">importances</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">importances</span><span class="p">[</span><span class="n">indices</span><span class="p">])</span>
@@ -17998,9 +18125,9 @@ Name: OSLG, Length: 420, dtype: float64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>OOBP           -3.304752e-01
-RA             -2.614768e-01
-OSLG           -2.227374e-01
+<pre>RA             -2.614768e-01
+OOBP           -1.322234e-01
+OSLG           -8.526631e-03
 Team           -3.757032e-03
 League         -2.261189e-19
 G               2.220776e-02
@@ -18009,6 +18136,7 @@ BA              2.902170e-01
 SLG             3.247127e-01
 OBP             3.638902e-01
 RS              3.866285e-01
+RD              5.810944e-01
 W               6.167573e-01
 RankSeason      8.497857e-01
 RankPlayoffs    9.122019e-01
@@ -18024,10 +18152,47 @@ dtype: float64
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">,</span> <span class="s1">&#39;League&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;OSLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OOBP&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;BA&#39;</span><span class="p">,</span> <span class="s1">&#39;SLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OBP&#39;</span><span class="p">,</span> <span class="s1">&#39;RS&#39;</span><span class="p">,</span> <span class="s1">&#39;OBP&#39;</span><span class="p">,</span> <span class="s1">&#39;RS&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;RankSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;RankPlayoffs&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">elapsed_time</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time:&#39;</span><span class="p">,</span> <span class="n">elapsed_time</span><span class="p">,</span> <span class="s1">&#39;seconds&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Elapsed time: 0.03390932083129883 seconds
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">,</span> <span class="s1">&#39;League&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;OSLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OOBP&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;BA&#39;</span><span class="p">,</span> <span class="s1">&#39;SLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OBP&#39;</span><span class="p">,</span> <span class="s1">&#39;RS&#39;</span><span class="p">,</span> <span class="s1">&#39;OBP&#39;</span><span class="p">,</span> <span class="s1">&#39;RD&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;RankSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;RankPlayoffs&#39;</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Playoffs&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)),</span> <span class="n">importances</span><span class="p">[</span><span class="n">indices</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)),</span> <span class="p">[</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">])</span>
@@ -18054,7 +18219,7 @@ dtype: float64
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -18068,7 +18233,7 @@ dtype: float64
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Set importance threshold to 0.4 and show the variables greater than 0.4</span>
@@ -18096,8 +18261,9 @@ dtype: float64
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>OOBP
-OBP
+Year
 RS
+OBP
 </pre>
 </div>
 </div>
@@ -18109,7 +18275,7 @@ RS
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Drop unimportant variables (Year, Team, League, RankSeason, RankPlayoffs, G)</span>
@@ -18129,7 +18295,7 @@ RS
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Rank the variables by importance with ANOVA</span>
-
+<span class="n">start1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">importances1</span> <span class="o">=</span> <span class="n">baseball_3</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Playoffs&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">baseball_3</span><span class="o">.</span><span class="n">Playoffs</span><span class="p">))</span>
 <span class="n">indices1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">importances1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">importances1</span><span class="p">[</span><span class="n">indices1</span><span class="p">])</span>
@@ -18152,13 +18318,14 @@ RS
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>OOBP   -0.330475
-RA     -0.261477
-OSLG   -0.222737
+<pre>RA     -0.261477
+OOBP   -0.132223
+OSLG   -0.008527
 BA      0.290217
 SLG     0.324713
 OBP     0.363890
 RS      0.386628
+RD      0.581094
 W       0.616757
 dtype: float64
 </pre>
@@ -18172,10 +18339,47 @@ dtype: float64
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;OSLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OOBP&#39;</span><span class="p">,</span> <span class="s1">&#39;BA&#39;</span><span class="p">,</span> <span class="s1">&#39;SLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OBP&#39;</span><span class="p">,</span> <span class="s1">&#39;RS&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">end1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">elapsed_time1</span> <span class="o">=</span> <span class="n">end1</span> <span class="o">-</span> <span class="n">start1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time:&#39;</span><span class="p">,</span> <span class="n">elapsed_time1</span><span class="p">,</span> <span class="s1">&#39;seconds&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Elapsed time: 3.909811496734619 seconds
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;OOBP&#39;</span><span class="p">,</span> <span class="s1">&#39;OSLG&#39;</span><span class="p">,</span> <span class="s1">&#39;BA&#39;</span><span class="p">,</span> <span class="s1">&#39;SLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OBP&#39;</span><span class="p">,</span> <span class="s1">&#39;RS&#39;</span><span class="p">,</span> <span class="s1">&#39;RD&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Playoffs&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices1</span><span class="p">)),</span> <span class="n">importances1</span><span class="p">[</span><span class="n">indices1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices1</span><span class="p">)),</span> <span class="p">[</span><span class="n">names1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices1</span><span class="p">])</span>
@@ -18202,7 +18406,7 @@ dtype: float64
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAEWCAYAAABv+EDhAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8vihELAAAACXBIWXMAAAsTAAALEwEAmpwYAAAYf0lEQVR4nO3de7hddX3n8fcHNAoGDMgBuYUogiiCEY9aKSrV1geoVBxFwHphhjG1ah1xoN46DvbxMmitl9bLRCtYa8EbAo6iIoqoBCWBcBPlooAiD4SL3Eqsxu/8sdeBzeEk2eGcvU+S3/v1POfJ3uu39lrf30myP/u3fnutlapCktSeTWa7AEnS7DAAJKlRBoAkNcoAkKRGGQCS1CgDQJIaZQCoeUnOTvLfh7yPJDkhyW1Jftwt++skNya5K8mjhrl/aSoGgJqR5Jok93RvuDd2b8hzR7T7/YA/A3aqqqcneSjwj8Dzq2puVd0yojqkexkAas3BVTUX2Ad4GvB3I9rvLsA1VXV393w74OHAZSPav/QABoCaVFXXA2cAT+pfnmTXJN9JckuSm5N8Lsm8ru3YJF+etP4/JflQ93iHJKcnuTXJVUle3S0/CvgU8Mxu9HES8LNuE7/p9pckH0xyU5Lbk1yc5H61STPNAFCTkuwMHARcOLkJeC+wA/AEYGfguK7t34AD+gLhIcBhwGe79pOAX3WvfQnwniTPq6p/AV4DLOkO9xwB7Nm9Zl5VPRd4PvBsYHdgXrddDwtpqAwAtebUJL8BfgB8D3hPf2NVXVVVZ1bVb6tqBb3j9M/p2m4AzgEO7VY/ALi5qpZ1gbIf8OaqWllVy+l96n/FgHX9DtgC2ANIVV3e7U8aGgNArTmkquZV1S5V9dqquqe/Mcm2SU5Ocn2SO+h96t+mb5XPAC/vHr+c+z797wDcWlV39q17LbDjIEVV1XeAfwY+CtyYZHGSLde5d9I6MACk+3svUMDeVbUlvTf59LWfCuzdHZ9/AfC5bvmvga2TbNG37nzg+kF3XFUfqaqn0js8tDtw7IPthDQIA0C6vy2Au+hNzu7IpDfhqloJfAn4d+DHVXVdt/yXwLnAe5M8PMnewFHcFxBrlORpSZ7RfT30bmAlsGqG+iRNyQCQ7u+d9L4iejvwNeCUKdb5DLAX9x3+mXAEsIDeaOArwP+uqjMH3O+WwCeB2+gdOroF+Id1rF1aJ/GGMNK6STIf+Cnw6Kq6Y7brkR4sRwDSOkiyCfAm4GTf/LWhe8hsFyBtKJI8AriR3iGaA2a5HGnaPAQkSY3yEJAkNWqDOgS0zTbb1IIFC2a7DEnaYCxbtuzmqhqbqm2DCoAFCxawdOnS2S5DkjYYSa5dXZuHgCSpUQaAJDXKAJCkRhkAktQoA0CSGmUASFKjDABJapQBIEmN2qBOBFMDkrWvI7VmSNdscwQgSY0yACSpUQaAJDXKAJCkRhkAktQoA0CSGjVQACTZKclpSa5McnWSDyeZ07Xtl+THSX7a/Szqe91xSa5Psrxr+3h3U22SnJjkF13bBUmeOZwuSpKmstYASBLgFODUqtoN2B2YC7w7yaOBfwdeU1V7APsBf5Xkz/s28cGqWgg8EdgLeE5f27Fd21uA/zv97kiSBjXIiWDPBVZW1QkAVbUqydHAL7r2E6vqgq7t5iR/CxwHfG3SduYADwdum2If5wCPW/fyJUkP1iCHgPYElvUvqKo7gOuAXSe3AUu710w4Osly4AbgiqpaPsU+DgYumWrnSRYlWZpk6YoVKwYoV5I0iEECIMBU5yFnDW39yyYOAW0LPCLJ4X1t7+/CYRFw1FQ7r6rFVTVeVeNjY1Pe11iS9CAMEgCXAeP9C5JsCexM7zDQ+KT1nwr8ZPJGqup3wDeAZ/ctPraqFlbVn1XVpetSuCRpegYJgLOAzZO8EiDJpsAHgBOB9wNHJlnYtT0KOB543+SNdJPJ+wJXz0ThkqTpWWsAVFUBLwIOTXIlcAWwEnhbVd0AvBz4ZJKfAucCn66qr/ZtYmIO4FJ6k84fm9kuSJIejNSQLjM6DOPj47V06dLZLkPD5OWgpQeaxvt0kmVVNflQPeCZwJLULANAkhplAEhSowwASWqUASBJjfKm8Fq/bEDfSpM2dI4AJKlRBoAkNcoAkKRGGQCS1CgngbV+8VIQbXHSf1Y5ApCkRhkAktQoA0CSGmUASFKjDABJapQBIEmNGmoAJFmVZHmSS5N8Ncm8Se0XJTlpmDVIkqY27BHAPVW1sKqeBNwKvG6iIckTuv0/O8kjhlyHJGmSUR4CWgLs2Pf8ZcBngW8BfzHCOiRJjCgAkmwKPA84vW/xYcDngZOAI9bw2kVJliZZumLFiuEWKkkNGXYAbJZkOXALsDVwJkCSpwErqupa4CxgnyRbTbWBqlpcVeNVNT42NjbkciWpHSOZAwB2AeZw3xzAEcAeSa4Brga2BF485FokSX1Gcgioqm4H3gAck+RhwKHA3lW1oKoWAC9kDYeBJEkzb2STwFV1IXAR8FLg+qq6vq/5HOCJSbYfVT2S1LqhXg66quZOen5w9/Czk5avAnzzl6QR8kxgSWqUASBJjTIAJKlRBoAkNcp7Amv94j1ipZFxBCBJjTIAJKlRBoAkNcoAkKRGOQms9Usy2xVopjmxv95yBCBJjTIAJKlRBoAkNcoAkKRGGQCS1CgDQJIaNdQASLIqyfIkFyW5IMm+k9qPTrIyySOHWYck6YFGclP4qnoy8FbgvZPajwDOB1405DokSZOM8hDQlsBtE0+S7ArMBf4ObwgvSSM37DOBN0uyHHg4vXv+Prev7QjgJOD7wOOTbFtVN03eQJJFwCKA+fPnD7lcSWrHqA4B7QEcAPxrcu+5/ocDJ1fVH4BTgEOn2kBVLa6q8aoaHxsbG3K5ktSOkV0LqKqWJNkGGEvyaGA34MwuD+YAPwc+Oqp6JKl1I5sDSLIHsClwC73DP8dV1YLuZwdgxyS7jKoeSWrdqOYAAAK8qqpWJTkcOHDSul+hd1jo+CHXJEliyAFQVZuuZvljplj2pmHWIkm6P88ElqRGGQCS1CgDQJIaZQBIUqO8J7DWL94/VhoZRwCS1CgDQJIaZQBIUqMMAElqlJPAWr/ce7FYrZecpN+oOAKQpEYZAJLUKANAkhplAEhSowwASWqUASBJjZqxAEjy9iSXJbk4yfIkz0hydpLxKdZ9etd2ZZILknwtyV4zVYskae1m5DyAJM8EXgDsU1W/7W7+Pmc1624HfAF4WVWd2y3bD9gVuGQm6pEkrd1MnQi2PXBzVf0WoKpuBsjUJ/W8HvjMxJt/t/4PZqgOSdKAZuoQ0LeAnZNckeRjSZ6zhnX3BC4YdMNJFiVZmmTpihUrpl2oJKlnRgKgqu4CngosAlYAn09y5CCvTfKjJJcn+fBqtr24qsaranxsbGwmypUkMYPXAqqqVcDZwNlJLgFetZpVLwP2AU7rXveMJC+hN4cgSRqRGRkBJHl8kt36Fi0Erl3N6h8Fjkyyb9+yzWeiDknS4GZqBDAX+Kck84DfA1fROxz0JeBrSX7Xrbekqg5NchhwfJIdgZuAm4G/n6FaJEkDmJEAqKplwL5TNO2/mvXPA9Y0USxJGjLPBJakRhkAktQoA0CSGmUASFKjDABJapQ3hdf6xZuOSyPjCECSGmUASFKjDABJapQBIEmNchJY65epbyKkYXLivVmOACSpUQaAJDXKAJCkRhkAktQoA0CSGmUASFKjph0ASXZKclqSK5NcneTDSeYk2T/J7UmWJ7k4ybeTbNu95sgkK7q2nyR59fS7IklaF9MKgCQBTgFOrardgN3p3R/43d0q36+qhVW1N3A+8Lq+l3++qhbSu23ke5JsN51aJEnrZrojgOcCK6vqBICqWgUcDfw3YPOJlbqg2AK4bfIGquom4Gpgl2nWIklaB9M9E3hPYFn/gqq6I8l1wOOAZyVZDjwKuBt42+QNJHks8Fjgqql2kGQRsAhg/vz50yxXkjRhuiOAAFOdRz6xfOIQ0M7ACcD7+tY5rAuHk4C/qqpbp9pBVS2uqvGqGh8bG5tmuZKkCdMdAVwGvLh/QZItgZ3pHdbpdzrw5b7nn6+q109z/5KkB2m6I4CzgM2TvBIgyabAB4ATgf+YtO5+PDAUJEmzZFoBUFUFvAg4NMmVwBXASu471v+s7queFwGvAP7ndPYnSZo5074cdFX9Ejh4iqazgUeu5jUn0hslSJJmiWcCS1KjDABJapQBIEmNMgAkqVHeE1jrF+9PK42MIwBJapQBIEmNMgAkqVEGgCQ1ykngUUtmu4L1m5PA0sg4ApCkRhkAktQoA0CSGmUASFKjDABJapQBIEmNGlkAJPlgkjf2Pf9mkk/1Pf9AkjeNqh5Jat0oRwDnAvsCJNkE2AbYs699X+CHI6xHkpo2ygD4IV0A0HvjvxS4M8lWSR4GPAG4cIT1SFLTRnYmcFX9Osnvk8ynFwRLgB2BZwK3AxdX1X9Ofl2SRcAigPnz54+qXEna6I16EnhiFDARAEv6np871QuqanFVjVfV+NjY2MgKlaSN3agDYGIeYC96h4DOozcC8Pi/JI3YbIwAXgDcWlWrqupWYB69EFgy4lokqWmjDoBL6H3757xJy26vqptHXIskNW2kl4OuqlXAlpOWHTnKGiRJPZ4JLEmNMgAkqVEGgCQ1ygCQpEZ5T+BR8563ktYTjgAkqVEGgCQ1ygCQpEYZAJLUKCeBpyuZ7Qo2Lk6SSyPjCECSGmUASFKjDABJapQBIEmNMgAkqVEGgCQ1auAASLJTktOSXJnk6iQfTjInyeZJPpfkkiSXJvlBkrnda+5azbZenuTiJJcluSjJp5LMm6E+SZIGMNB5AEkCnAJ8vKpemGRTYDHwbuBW4Maq2qtb9/HA79awrQOAo4EDq+r6bluvArYDfjONvkiS1sGgJ4I9F1hZVSdA79aOSY4GfgF8GfjZxIpV9bOpN3GvtwPHVNX1E9sCPr2uhUuSpmfQQ0B7Asv6F1TVHcB1wL8Bb06yJMm7kuw2wLYuGLTAJIuSLE2ydMWKFYO+TJK0FoMGQICpztEPcBvwWOD9wNbA+UmeMNBGk72SLO/mFA6bap2qWlxV41U1PjY2NmC5kqS1GTQALgPG+xck2RLYGbi6qu6qqlOq6rX0RgQHrWVb+wBU1SVVtRA4A9hsHWuXJE3DoAFwFrB5klcCdBO3HwBOBJ6SZKtu+RzgicC1a9jWe4F/SLJT3zLf/CVpxAYKgKoq4EXAoUmuBK4AVgJvA3YFvpfkEuBCYCm9iWHohcav+n7eVFVfBz4CnJHkJ0nOBVYB35zRnkmS1ii1AV1+d3x8vJYuXTrbZdyfl4OeWRvQv0dpQ5BkWVWNT9XmmcCS1CgDQJIaZQBIUqMMAElqlAEgSY3ypvDT5bdWJG2gHAFIUqMMAElqlAEgSY0yACSpUe1MAnvJhg2Dk+rSyDgCkKRGGQCS1CgDQJIaZQBIUqMMAElqlAEgSY0aagAkWZVkeZJLk3w1ybxu+SZJPtItvyTJ+UkeM8xaJEn3N+wRwD1VtbCqngTcCryuW34YsAOwd1XtRe9+w78Zci2SpD6jPBFsCbB393h74Iaq+gNAVf1qhHVIkhjRHECSTYHnAad3i74AHNwdHvpAkqes4bWLkixNsnTFihWjKFeSmjDsANgsyXLgFmBr4Ey49xP/44G3An8AzkryvKk2UFWLq2q8qsbHxsaGXK4ktWMkcwDALsAc7psDoKp+W1VnVNWxwHuAQ4ZciySpz0gOAVXV7cAbgGOSPDTJPkl2gN43gujNDVw7ilokST0jmwSuqguTXAQcDqwAPpnkYV3zj4F/HlUtkqQhB0BVzZ30/OC+p98Y5r4lSWvmmcCS1CgDQJIaZQBIUqMMAElqVDv3BPZes5J0P44AJKlRBoAkNcoAkKRGGQCS1CgDQJIaZQBIUqMMAElqlAEgSY0yACSpUakN6AzZJCvY+G8csw1w82wXMYvsf9v9B38HM93/XapqyvvpblAB0IIkS6tqfLbrmC32v+3+g7+DUfbfQ0CS1CgDQJIaZQCsfxbPdgGzzP6r9d/ByPrvHIAkNcoRgCQ1ygCQpEYZALMsydZJzkxyZffnVlOss3OS7ya5PMllSf7HbNQ6k5IckORnSa5K8pYp2pPkI137xUn2mY06h2WA/v9l1++Lk5yb5MmzUeewrK3/fes9LcmqJC8ZZX3DNkj/k+yfZHn3f/57QymkqvyZxR/gfcBbusdvAY6fYp3tgX26x1sAVwBPnO3ap9HnTYGrgccCc4CLJvcHOAg4AwjwR8CPZrvuEfd/X2Cr7vGBrfW/b73vAF8HXjLbdY/4738e8BNgfvd822HU4ghg9r0Q+Ez3+DPAIZNXqKobquqC7vGdwOXAjqMqcAieDlxVVT+vqv8ETqb3e+j3QuBfq+c8YF6S7Udd6JCstf9VdW5V3dY9PQ/YacQ1DtMgf/8AfwN8GbhplMWNwCD9fxlwSlVdB1BVQ/kdGACzb7uqugF6b/TAtmtaOckC4CnAj4Zf2tDsCPyy7/mveGCgDbLOhmpd+3YUvdHQxmKt/U+yI/Ai4BMjrGtUBvn73x3YKsnZSZYleeUwCnnIMDaq+0vybeDRUzS9fR23M5feJ6I3VtUdM1HbLMkUyyZ/H3mQdTZUA/ctyZ/QC4D9hlrRaA3S/w8Bb66qVclUq2/QBun/Q4CnAs8DNgOWJDmvqq6YyUIMgBGoqj9dXVuSG5NsX1U3dIc4phzqJXkovTf/z1XVKUMqdVR+Bezc93wn4NcPYp0N1UB9S7I38CngwKq6ZUS1jcIg/R8HTu7e/LcBDkry+6o6dSQVDteg//5vrqq7gbuTnAM8md7834zxENDsOx14Vff4VcBpk1dI73/BvwCXV9U/jrC2YTkf2C3JY5LMAQ6n93vodzrwyu7bQH8E3D5xqGwjsNb+J5kPnAK8YqY/9a0H1tr/qnpMVS2oqgXAl4DXbiRv/jDYv//TgGcleUiSzYFn0Jv7m1GOAGbf/wG+kOQo4DrgUIAkOwCfqqqDgD8GXgFckmR597q3VdXXZ6Heaauq3yd5PfBNet+I+HRVXZbkNV37J+h98+Mg4CrgP4D/Olv1zrQB+/8O4FHAx7pPwb+vjeQKmQP2f6M1SP+r6vIk3wAuBv5A773g0pmuxUtBSFKjPAQkSY0yACSpUQaAJDXKAJCkRhkAktQoA0Czrrva4/Iklyb5apJ5a1n/uCTHrGWdQ5I8se/53ydZ7Ql561DriaO+MmWSN3bfBZdmlAGg9cE9VbWwqp4E3Aq8bga2eQhwbwBU1Tuq6tszsN2RSrIp8EbAANCMMwC0vllCd2GsJLsm+UZ3MazvJ9lj8spJXp3k/CQXJflyks2T7Av8BfD+bmSx68Qn9yQHJvlC3+v3T/LV7vHzkyxJckGSL3bXXlqtJNckeU/3mqVJ9knyzSRXT5zU023/nCRfSfKTJJ9IsknXdkSSS7qRz/F9272rG7H8iN71onYAvpvku137x7v9XZbknZPqeWdX/yUTv68kc5Oc0C27OMmLH0x/tRGa7Wtj++MPcFf356bAF4EDuudnAbt1j58BfKd7fBxwTPf4UX3beRfwN93jE+m7hvzEc3pnv18HPKJb/nHg5fSuN3NO3/I3A++YotZ7twtcA/x19/iD9M7a3AIYA27qlu8PrKR37fdNgTO7Onbo6hjravoOcEj3mgJe2rfPa4Bt+p5v3ff7OhvYu2+9if6/lt7ZowDHAx/qe/1Wg/bXn437x0tBaH2wWXeJiwXAMuDM7tPovsAXc9/VIB82xWuflORd9G6gMZfe6fWrVb3T8L8BHJzkS8CfA38LPIfeIaMfdvubQ280sjYT13C5BJhbvfs13JlkZd9cxo+r6ucASU6id2XP3wFnV9WKbvnngGcDpwKr6F34b3VemmQRveDYvqv74q5t4kKBy4D/0j3+U3rXm5n4HdyW5AUPsr/aiBgAWh/cU1ULkzwS+H/05gBOBH5TVQvX8toT6X1yvijJkfQ+ca/N57t93AqcX1V3pvcueGZVHbGOtf+2+/MPfY8nnk/8/5p8vZVi6ksCT1hZVaumakjyGOAY4GndG/mJwMOnqGdV3/4zRQ0Ptr/aiDgHoPVGVd0OvIHeG9w9wC+STFwcL5n6vrhbADekd7nsv+xbfmfXNpWzgX2AV9MLA+jddeuPkzyu29/mSXafXo/u9fT0rvy4CXAY8AN6N/R5TpJtuoneI4DV3fe1vy9bAncDtyfZjt7tItfmW8DrJ56kd9/pYfZXGwgDQOuVqrqQ3j1SD6f3hn5UkouAy5j6toH/i96b6ZnAT/uWnwwcm+TCJLtO2scqeiONA7s/6Q7FHAmclORiem+QD5h0fpCW0Lvq66XAL4CvVO/S1m8FvkuvvxdU1QMuBd5ZDJyR5LtVdRFwIb3fx6eBHw6w/3fRu7vUpd3v8k+G3F9tILwaqDRESfanN2H9glkuRXoARwCS1ChHAJLUKEcAktQoA0CSGmUASFKjDABJapQBIEmN+v9y8JqdM94QbAAAAABJRU5ErkJggg==
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -18216,7 +18420,7 @@ dtype: float64
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Set importance threshold to 0.4 and show the variables greater than 0.4</span>
@@ -18244,10 +18448,10 @@ dtype: float64
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>RA
-OOBP
+OSLG
 BA
 SLG
-RS
+OBP
 </pre>
 </div>
 </div>
